@@ -11,6 +11,10 @@ contract Telemetry {
   }
 
   function getLatestTelemetry(address addr) returns (string) {
-    return latestTelemetry[addr];
+    if (bytes(latestTelemetry[addr]).length == 0) {
+      return "{ \"error\": \"Not Found\" }";
+    } else {
+      return latestTelemetry[addr];
+    }
   }
 }
