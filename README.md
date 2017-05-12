@@ -25,6 +25,10 @@ truffle test --network quorum
 
 # Testing with testrpc
 
+<aside class="notice">
+Notice that the privacy test fails on purpose, because testrpc doesn't have the required privacy features.
+</aside>
+
 ## Dependencies
 
 ```
