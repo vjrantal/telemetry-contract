@@ -1,2 +1,3 @@
 .vscode/
 build/
+event-watcher/node_modules/
