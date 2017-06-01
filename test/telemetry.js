@@ -3,7 +3,7 @@ const Telemetry = artifacts.require('./Telemetry.sol');
 const sampleTelemetry = {
   values: [
     {
-      value: 99
+      value: Math.random()
     }
   ]
 };
@@ -43,6 +43,8 @@ contract('Telemetry', function (accounts) {
         const telemetry = JSON.parse(result.args.telemetry);
         assert.equal(telemetry.values[0].value, sampleTelemetry.values[0].value,
           'the event should have same value as in the sent telemetry');
+        assert.equal(result.args.from, fromAccount,
+          'the event should include the account the telemetry is from');
 
         done();
       });
@@ -77,12 +79,6 @@ contract('Telemetry', function (accounts) {
       instance.sendTelemetry.sendTransaction(JSON.stringify(sampleTelemetry), {
         from: fromAccount,
         privateFor: [nodes.node7.publicKey]
-      })
-      .then(function (tx) {
-        return instance.sendTelemetry.sendTransaction(JSON.stringify(sampleTelemetry), {
-          from: fromAccount,
-          privateFor: [nodes.node7.publicKey]
-        });
       })
       .then(function (tx) {
         setProvider(instance, nodes.node3.url);
