@@ -1,3 +1,6 @@
 .vscode/
 build/
 event-watcher/node_modules/
+telemetry-sender/.idea/
+telemetry-sender/.gradle/
+telemetry-sender/build/
