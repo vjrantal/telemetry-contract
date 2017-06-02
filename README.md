@@ -4,6 +4,8 @@ This repository contains a simple telemetry contract and the source code for a s
 
 <img width="1010" alt="architecture" src="https://cloud.githubusercontent.com/assets/207474/26714715/72a999c6-477b-11e7-9156-301e30dce0a0.png">
 
+A video demo showing the code in action can be found from [https://youtu.be/64kMWxTaXw8](https://youtu.be/64kMWxTaXw8).
+
 It also contains a test related to data privacy specific for [Quorum](https://github.com/jpmorganchase/quorum).
 The test acts as a sample for a private deployment of the contract and a private transaction through it and verifies the privacy of the data in this scenario.
 
