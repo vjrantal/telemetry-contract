@@ -1,10 +1,13 @@
 # Introduction
 
-This repository contains a simple telemetry contract, but more importantly, it contains a test specific
-for [Quorum](https://github.com/jpmorganchase/quorum). The test acts as a sample for a private deployment
-of the contract and a private transaction through it and verifies the privacy of the data in this scenario.
+This repository contains a simple telemetry contract and the source code for a system as shown below:
 
-# Testing with Quorum
+<img width="1010" alt="architecture" src="https://cloud.githubusercontent.com/assets/207474/26714715/72a999c6-477b-11e7-9156-301e30dce0a0.png">
+
+It also contains a test related to data privacy specific for [Quorum](https://github.com/jpmorganchase/quorum).
+The test acts as a sample for a private deployment of the contract and a private transaction through it and verifies the privacy of the data in this scenario.
+
+# Running the automated test on Quorum
 
 ## Dependencies
 
@@ -23,7 +26,7 @@ npm install -g truffle
 truffle test --network quorum
 ```
 
-# Testing with testrpc
+# Running the automated test on testrpc
 
 <aside class="notice">
 Notice that the privacy test fails on purpose, because testrpc doesn't have the required privacy features.
